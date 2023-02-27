@@ -38,8 +38,8 @@
                 </div>
               </div>
               <div class="title">
-                <?php echo htmlspecialchars($ctx['tribute']['nombres']) ;?> <br>
-                <?php echo htmlspecialchars($ctx['tribute']['apellidos']);?> <br>
+                <?php echo $ctx['tribute']['nombres'] ;?> <br>
+                <?php echo $ctx['tribute']['apellidos'];?> <br>
                 <small class="text-muted">Q.E.P.D</small>
                 <br>
                 <br>
