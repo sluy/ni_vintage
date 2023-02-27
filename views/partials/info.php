@@ -33,8 +33,7 @@
           <div class="info">
             <div class="data">
               <div class="avatar">
-                <div class="image"
-                  style="background-image:url('<?php echo public_url('assets/images/demo/avatar.jpg');?>');">
+                <div class="image" style="background-image:url('<?php echo $GLOBALS['tribute']['foto'];?>');">
                 </div>
               </div>
               <div class="title">
