@@ -33,12 +33,13 @@
           <div class="info">
             <div class="data">
               <div class="avatar">
-                <div class="image" style="background-image:url('<?php echo $GLOBALS['tribute']['foto'];?>');">
+                <div class="image"
+                  style="background-image:url('https://ni.neo.fo/<?php echo !empty($ctx['tribute']['foto']) ? $ctx['tribute']['foto'] : $ctx['tribute']['foto_redonda'];?>');">
                 </div>
               </div>
               <div class="title">
-                <?php echo $GLOBALS['tribute']['nombres'];?> <br>
-                <?php echo $GLOBALS['tribute']['apellidos'];?> <br>
+                <?php echo htmlspecialchars($ctx['tribute']['nombres']) ;?> <br>
+                <?php echo htmlspecialchars($ctx['tribute']['apellidos']);?> <br>
                 <small class="text-muted">Q.E.P.D</small>
                 <br>
                 <br>

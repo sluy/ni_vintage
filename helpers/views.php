@@ -21,6 +21,7 @@ function include_view($path) {
 
         if (file_exists($path) && is_readable($path)) {
             try {
+                $ctx = $GLOBALS;
                 include($path);
                 return true;
             } catch (\Throwable $th) {
