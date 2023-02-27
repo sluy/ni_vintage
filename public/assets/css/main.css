@@ -1,0 +1,145 @@
+.site {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+
+.site .left-column,
+.site .right-column {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.site .left-column ul.events li,
+.site .left-column .brand-logo,
+.site .right-column {
+  background: rgba(255,255,255, 1);
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.site .right-column .info .data:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.site .right-column .info .data .avatar {
+  display: inline-block;
+}
+
+.site .right-column .info .data .avatar .image {
+  border-radius: 2000px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  border-radius: 2000px;
+}
+
+.site .right-column .info .data .title {
+  font-size: 20px;
+  color: #000;
+}
+
+.site .right-column .info .data .content {
+  font-size: 15px;
+  color: #666;
+}
+
+.site .right-column .qr-code img {
+  height: 120px;
+  width: 120px;
+  margin: 5px 0px;
+}
+
+.site .right-column .qr-code a, a:visited {
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0px;
+}
+
+.site .right-column .qr-code a:hover {
+  text-decoration: dotted;
+}
+
+
+
+
+.site .left-column ul.events {
+  list-style-type: none;
+  background: transparent;
+  padding: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site .left-column ul.events li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  background: rgba(255,255,255, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.site .left-column ul.events li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.site .left-column ul.events li .section {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.site .left-column ul.events li .section:not(:last-child) {
+  margin-right: 15px;
+}
+
+
+.site .left-column ul.events li .avatar img {
+  height: 50px;
+  width: 50px;
+  display: block;
+}
+
+.site .left-column ul.events li .data {
+  height: auto;
+  overflow-x: hidden;
+}
+
+.site .left-column ul.events li .data .title {
+  color: #000;
+  font-weight: bold;
+}
+
+
+
+.site .left-column .brand-logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
