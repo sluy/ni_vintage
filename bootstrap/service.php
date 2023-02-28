@@ -3,4 +3,3 @@ $service = isset($_GET['homenaje_id']) ? Service::find($_GET['homenaje_id']) : n
 if (!$service) {
     die('Not Found');
 }
-dump($service->homenajes);

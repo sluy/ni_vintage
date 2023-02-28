@@ -112,7 +112,7 @@ class Service extends Model {
 
     public function get_homenajes_value($value, $existsKey) {
         if (!$existsKey) {
-            return $this->set('homenajes', Room::many([
+            return $this->set('homenajes', Tribute::many([
                 'servicio_id' => $this->get('id')
             ]));
         }
