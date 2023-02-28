@@ -110,11 +110,18 @@ class Service extends Model {
         return null;
     }
 
+    public function get_homenajes_value($value, $existsKey) {
+        if (!$existsKey) {
+            return $this->set('homenajes', Room::many([
+                'servicio_id' => $this->get('id')
+            ]));
+        }
+        return $value;
+    }
+
     public function get_sala_value($value, $existsKey) {
         if (!$existsKey) {
-            $tmp = Room::find($this->get('sala_id'));
-            $this->set('sala', Room::find($this->get('sala_id')));
-            return $this->get('sala');
+            return $this->set('sala', Room::find($this->get('sala_id')));
         }
         return $value;
     }
