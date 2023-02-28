@@ -115,24 +115,45 @@ class Service extends Model {
             return $value;
         }
         $res = [];
+
         foreach ($this->get('homenajes') as $current) {
-            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0 || !empty($current->link_video)) {
+            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0 || $current->link_video) {
                 continue;
             }
             $src = null;
-            if (is_string($current->predisenada) && $current->predisenada !== '') {
+            if ($current->predisenada) {
                 $src = $current->predisenada;
-            } else if (is_string($current->foto) && $current->foto !== '') {
+            } else if ($current->foto) {
                 $src = 'https://ni.neo.fo/' . $current->foto;
             }
             if (!empty($src)) {
-                $o = new stdClass();
-                $o->src = $src;
-                $o->original_height = 0;
-                $o->original_width = 0;
-                $o->height = 0;
-                $o->width = 0;
-                $res[] = $o;
+
+                try {
+                    list($width, $height, $type, $attr) = getimagesize($src);
+                    if ($width > 0 && $height > 0) {
+                        $o = new stdClass();
+	                $o->src = $src;
+	                $o->original_height = $height;
+	                $o->original_width = $width;
+	                $o->height = $height;
+	                $o->width = $width;
+
+	                if ($width > 1000) {
+	                    $ratio = (1000 * 100) / $width;
+	                    $o->height = round(ceil(($o->height * $ratio)/100), 0);
+	                    $o->width = round(ceil(($o->width * $ratio)/100), 0);
+	                }
+	                if ($o->height > 1000) {
+	                    $ratio = (1000 * 100) / $o->height;
+	                    $o->height = round(ceil(($o->height * $ratio)/100), 0);
+	                    $o->width = round(ceil(($o->width * $ratio)/100), 0);
+	                }
+
+	                $res[] = $o;
+                    }
+                } catch (\Throwable $th) {
+                //throw $th;
+                }
             }
         }
         return $res;
