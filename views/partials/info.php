@@ -3,26 +3,7 @@
     <div class="row h-100">
       <div class="col-2 h-100">
         <div class="left-column h-100">
-          <ul class="events">
-            <li>
-              <div class="section avatar">
-                <img src="<?php echo public_url('assets/images/demo/vela.png');?>" />
-              </div>
-              <div class="section data">
-                <div class="title">Lorem Ipsum</div>
-                <div class="content">Dolor sit amet</div>
-              </div>
-            </li>
-            <li>
-              <div class="section avatar">
-                <img src="<?php echo public_url('assets/images/demo/abrazo.png');?>" />
-              </div>
-              <div class="section data">
-                <div class="title">Lorem Ipsum</div>
-                <div class="content">Dolor sit amet</div>
-              </div>
-            </li>
-          </ul>
+          <?php echo include_partial('info/abrazo_velas');?>
           <div class="brand-logo">
             <img src="<?php echo public_url('assets/images/demo/logo.png');?>" />
           </div>
@@ -31,20 +12,9 @@
       <div class="col-2 offset-8 h-100">
         <div class="right-column h-100">
           <div class="info">
-            <div class="data">
-              <div class="avatar">
-                <div class="image"
-                  style="background-image:url('https://ni.neo.fo/<?php echo !empty($ctx['tribute']['foto']) ? $ctx['tribute']['foto'] : $ctx['tribute']['foto_redonda'];?>');">
-                </div>
-              </div>
-              <div class="title">
-                <?php echo $ctx['tribute']['nombres'] ;?> <br>
-                <?php echo $ctx['tribute']['apellidos'];?> <br>
-                <small class="text-muted">Q.E.P.D</small>
-                <br>
-                <br>
-              </div>
-            </div>
+            <?php include_partial('info/fallecido_info');?>
+            <?php include_partial('info/destino');?>
+            <!--
             <div class="data">
               <div class="title">
                 Velatorios
@@ -62,17 +32,6 @@
                 Día 30 a las 13:00 hs.
               </div>
             </div>
-
-            <div class="data">
-              <div class="title">
-                Cementerio
-              </div>
-              <div class="content">
-                Cemex<br>
-                Día 31 a las 13:00 hs.
-              </div>
-            </div>
-
             <div class="data">
               <div class="title">
                 Misa
@@ -82,6 +41,7 @@
                 Día 17 a las 13:00 hs.
               </div>
             </div>
+            -->
 
           </div>
           <div class="qr-code">
