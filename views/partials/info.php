@@ -9,7 +9,7 @@
           </div>
         </div>
       </div>
-      <div class="col-2 offset-8 h-100">
+      <div class="col-3 offset-7 h-100">
         <div class="right-column h-100">
           <div class="info">
             <?php include_partial('info/fallecido_info');?>
@@ -42,7 +42,6 @@
               </div>
             </div>
             -->
-
           </div>
           <div class="qr-code">
             <img src="<?php echo public_url('assets/images/demo/qr-code.png');?>" />

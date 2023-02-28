@@ -126,6 +126,10 @@ class Model {
         return $this->_data;
     }
 
+    public function __isset($key) {
+        return $this->get($key) !== null;
+    }
+
     public function __set($key, $value) {
         $this->set($key, $value);
     }
