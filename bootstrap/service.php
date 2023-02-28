@@ -3,3 +3,7 @@ $service = isset($_GET['homenaje_id']) ? Service::find($_GET['homenaje_id']) : n
 if (!$service) {
     die('Not Found');
 }
+
+if (isset($_GET['test']) && in_array($_GET['test'], ['true', '1'])) {
+    dump($service->image_posts);
+}

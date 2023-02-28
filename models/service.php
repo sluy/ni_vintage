@@ -110,6 +110,33 @@ class Service extends Model {
         return null;
     }
 
+    public function get_image_posts_value($value, $existsKey) {
+        if ($existsKey && is_array($value)) {
+            return $value;
+        }
+        $res = [];
+        foreach ($this->get('homenajes') as $current) {
+            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0 || !empty($current->link_video)) {
+                continue;
+            }
+            $src = null;
+            if (is_string($current->predisenada) && $current->predisenada !== '') {
+                $src = $current->predisenada;
+            } else if (is_string($current->foto) && $current->foto !== '') {
+                $src = 'https://ni.neo.fo/' . $current->foto;
+            }
+            if (!empty($src)) {
+                $o = new stdClass();
+                $o->src = $src;
+                $o->original_height = 0;
+                $o->original_width = 0;
+                $o->height = 0;
+                $o->width = 0;
+                $res[] = $o;
+            }
+        }
+        return $res;
+    }
     public function get_homenajes_value($value, $existsKey) {
         if (!$existsKey) {
             return $this->set('homenajes', Tribute::many([
