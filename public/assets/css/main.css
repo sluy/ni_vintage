@@ -159,6 +159,10 @@ body {
   align-self: auto;
 }
 
+.site .left-column .events .items-wrapper ul li .section.data {
+  max-width:200px;
+}
+
 .site .left-column .events .items-wrapper ul li .section:not(:last-child) {
   margin-right: 15px;
 }
