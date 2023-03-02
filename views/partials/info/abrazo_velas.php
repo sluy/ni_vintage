@@ -5,7 +5,7 @@
   </div>
   <div class="items-wrapper">
     <ul id="event-list">
-      <?php foreach ($ctx['service']->abrazo_velas as $current) { ?>
+      <?php foreach (array_reverse($ctx['service']->abrazo_velas) as $current) { ?>
 
       <li>
         <div class="section avatar">

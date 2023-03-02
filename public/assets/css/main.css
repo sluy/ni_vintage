@@ -67,8 +67,9 @@ body {
   display: none;
 }
 
+
 .site .left-column .events.no-scroll .items-wrapper {
-  height: auto;
+  height: 425px;
   overflow: hidden;
 }
 
