@@ -110,6 +110,99 @@ class Service extends Model {
         return null;
     }
 
+    public function get_cliente_id_value($value) {
+        if (is_string($value)) {
+            $value = intval($value);
+        }
+        return is_int($value) && $value > 0 ? $value : 0;
+    }
+
+    public function get_id_value($value) {
+        if (is_string($value)) {
+            $value = intval($value);
+        }
+        return is_int($value) && $value > 0 ? $value : 0;
+    }
+
+    public function get_qrcode1_value($value) {
+        if (is_string($value)) {
+            $value = trim($value);
+            if ($value !== '') {
+                return $value;
+            }
+        }
+        return null;
+    }
+
+    public function get_qrcode1_src_value() {
+        $qr = $this->get('qrcode1');
+        $cID = $this->get('cliente_id');
+        if ($cID && $qr) {
+            return 'https://ni.neo.fo/images/' . $cID . '/servicios/qrcodes/' . $qr;
+        }
+        return null;
+    }
+
+    public function get_qrcode2_src_value() {
+        $qr = $this->get('qrcode2');
+        $cID = $this->get('cliente_id');
+        if ($cID && $qr) {
+            return 'https://ni.neo.fo/images/' . $cID . '/servicios/qrcodes/' . $qr;
+        }
+        return null;
+    }
+
+    public function get_qrcode_src_value() {
+        for ($n = 1; $n<=2; $n++) {
+            $src = $this->get('qrcode' . $n . '_src');
+            if ($src) {
+                return $src;
+            }
+        }
+        return $src;
+    }
+
+    public function get_url_value() {
+        for ($n = 1; $n<=2; $n++) {
+            $url = $this->get('url' . $n);
+            if ($url) {
+                return $url;
+            }
+        }
+        return $url;
+    }
+
+    public function get_qrcode2_value($value) {
+        if (is_string($value)) {
+            $value = trim($value);
+            if ($value !== '') {
+                return $value;
+            }
+        }
+        return null;
+    }
+
+    public function get_url1_value($value) {
+        if (is_string($value)) {
+            $value = trim($value);
+            if (filter_var($value, FILTER_VALIDATE_URL)) {
+                return $value;
+            }
+        }
+        return null;
+    }
+
+    public function get_url2_value($value) {
+        if (is_string($value)) {
+            $value = trim($value);
+            if (filter_var($value, FILTER_VALIDATE_URL)) {
+                return $value;
+            }
+        }
+        return null;
+    }
+
+
     public function get_image_posts_value($value, $existsKey) {
         if ($existsKey && is_array($value)) {
             return $value;

@@ -43,13 +43,7 @@
             </div>
             -->
           </div>
-          <div class="qr-code">
-            <img src="<?php echo public_url('assets/images/demo/qr-code.png');?>" />
-            <a href="#somethingHere">
-              Homenaje Virtual<br>
-              neo.fo/14bdbabf
-            </a>
-          </div>
+          <?php include_partial('info/qrcode');?>
         </div>
       </div>
     </div>

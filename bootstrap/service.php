@@ -5,5 +5,5 @@ if (!$service) {
 }
 
 if (isset($_GET['test']) && in_array($_GET['test'], ['true', '1'])) {
-    dump($service->image_posts);
+    dump($service->toArray());
 }
