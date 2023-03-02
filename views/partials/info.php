@@ -3,9 +3,11 @@
     <div class="row h-100">
       <div class="col-2 h-100">
         <div class="left-column h-100">
-          <?php echo include_partial('info/abrazo_velas');?>
+          <?php include_partial('info/abrazo_velas');?>
           <div class="brand-logo">
-            <img src="<?php echo public_url('assets/images/demo/logo.png');?>" />
+            <div class="wrapper">
+              <img src="<?php echo public_url('assets/images/demo/logo.png');?>" />
+            </div>
           </div>
         </div>
       </div>
