@@ -1,6 +1,5 @@
 <?php
 /**
- *
  * @property integer $id
  * @property integer $cliente_id
  * @property integer $id_online
@@ -83,11 +82,15 @@
  * @property string|\Destination $destino
  */
 class Service extends Model {
-    public static function find($id, $hashed = true) {
+    public static function find($id) {
         if (!is_string($id) && !is_int($id)) {
             return null;
         }
         $id = trim(strval($id));
+        $hashed = true;
+        if (strval(intval($id)) === $id) {
+            $hashed = false;
+        }
         if (empty($id)) {
             return null;
         }

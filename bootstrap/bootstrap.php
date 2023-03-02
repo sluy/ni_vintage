@@ -8,6 +8,7 @@ define('VIEW_PARTIALS_PATH', VIEWS_PATH . '/partials');
 define('CONFIG_PATH', BASE_PATH . '/config');
 define('LIBS_PATH', BASE_PATH . '/libs');
 define('MODELS_PATH', BASE_PATH . '/models');
+define('CONTROLLERS_PATH', BASE_PATH . '/controllers');
 
 #defining table aliases
 define('T_SERVICES', 'servicios');
@@ -20,11 +21,14 @@ define('T_EVENTS', 'abrazo_vela');
 define('T_TRIBUTE', 'homenajes');
 define('T_TRIBUTE_CONFIG', 'ni_homenajes');
 
+
 include_once(HELPERS_PATH . '/dump.php');
 
 #Bootstraping data to be used along app
 include_once(BOOTSTRAP_PATH . '/config.php');
 include_once(BOOTSTRAP_PATH . '/db.php');
+
+include_once(LIBS_PATH . '/router.php');
 
 #Data-Models
 include_once(MODELS_PATH . '/model.php');
@@ -44,6 +48,4 @@ include_once(HELPERS_PATH . '/url.php');
 
 #Initialize main service data
 include_once(BOOTSTRAP_PATH . '/service.php');
-
-#Adding main view
-include_view('main');
+include_once(BOOTSTRAP_PATH . '/router.php');

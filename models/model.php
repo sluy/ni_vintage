@@ -122,8 +122,41 @@ class Model {
         return null;
     }
 
+
+    public function getKeys() {
+        $keys = array_keys($this->_data);
+        foreach(get_class_methods($this) as $method) {
+            if (strlen($method) > 10 && substr($method, 0, 4) === 'get_' && substr($method, -6) === '_value') {
+                $key = substr($method, 4, -6);
+                if (!in_array($key, $keys)) {
+                    $keys[] = $key;
+                }
+            }
+        }
+        return $keys;
+    }
+
     public function toArray() {
-        return $this->_data;
+        $data = [];
+        foreach ($this->getKeys() as $key) {
+            $value = $this->get($key);
+            if ($value instanceof Model) {
+                $data[$key] = $value->toArray();
+            } else if (is_array($value)) {
+                $data[$key] = [];
+                foreach($value as $k => $v) {
+                    if ($v instanceof Model) {
+                        $data[$key][$k] = $v->toArray();
+                    } else {
+                        $data[$key][$k] = $v;
+                    }
+                }
+            } else {
+                $data[$key] = $value;
+            }
+        }
+        ksort($data);
+        return $data;
     }
 
     public function __isset($key) {

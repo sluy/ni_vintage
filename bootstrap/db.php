@@ -1,6 +1,4 @@
 <?php
-
-
 try {
     $dbHost = 'mysql:host=' . $cfg['db']['host'] . ';dbname=' . $cfg['db']['name'] . ';charset=utf8mb4';
     $db = new \PDO(
