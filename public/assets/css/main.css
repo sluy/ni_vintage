@@ -26,7 +26,7 @@ body {
   max-width: 340px;
   margin-left: auto;
 }
-.site .left-column ul.events li,
+.site .left-column .events .items-wrapper ul li,
 .site .left-column .brand-logo,
 .site .right-column {
   background: rgba(255,255,255, 1);
@@ -35,6 +35,37 @@ body {
   text-align: center;
   -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
   box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.8);
+}
+
+.site .left-column .events .items-wrapper {
+  height: 340px;
+  overflow: hidden;
+}
+
+.site .left-column  .events .scroll {
+  display: block;
+  height: 50px;
+  width:50px;
+  line-height: 50px;
+  text-align: center;
+  color: #000;
+  font-size:30px;
+  background: rgba(255,255,255, 1);
+  border-radius: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.site .left-column  .events .scroll:first-child {
+  margin-bottom: 20px;
+}
+
+.site .left-column .events.no-scroll .scroll {
+  display: none;
+}
+
+.site .left-column  .events .scroll:last-child {
+  margin-top: 20px;
 }
 
 .site .right-column .info .data:not(:last-child) {
@@ -84,18 +115,16 @@ body {
   text-decoration: dotted;
 }
 
-.site .left-column ul.events {
+.site .left-column .events .items-wrapper ul {
   list-style-type: none;
   background: transparent;
   padding: 0;
   display: block;
   width: 100%;
   height: auto;
-  max-height: 600px;
-  overflow-y: hidden;
 }
 
-.site .left-column ul.events li {
+.site .left-column .events .items-wrapper ul li {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -108,11 +137,11 @@ body {
   text-align: left;
 }
 
-.site .left-column ul.events li:not(:last-child) {
+.site .left-column .events .items-wrapper ul li:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.site .left-column ul.events li .section {
+.site .left-column .events .items-wrapper ul li .section {
   -webkit-flex: 0 1 auto;
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
@@ -121,23 +150,23 @@ body {
   align-self: auto;
 }
 
-.site .left-column ul.events li .section:not(:last-child) {
+.site .left-column .events .items-wrapper ul li .section:not(:last-child) {
   margin-right: 15px;
 }
 
 
-.site .left-column ul.events li .avatar img {
+.site .left-column .events .items-wrapper ul li .avatar img {
   height: 50px;
   width: 50px;
   display: block;
 }
 
-.site .left-column ul.events li .data {
+.site .left-column .events .items-wrapper ul li .data {
   height: auto;
   overflow-x: hidden;
 }
 
-.site .left-column ul.events li .data .title {
+.site .left-column .events .items-wrapper ul li .data .title {
   color: #000;
   font-weight: bold;
 }

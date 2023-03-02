@@ -20,3 +20,4 @@ const query = new Proxy(new URLSearchParams(window.location.search), {
 <script src="<?php echo public_url('assets/js/helpers.js');?>"></script>
 <script src="<?php echo public_url('assets/js/api.js');?>"></script>
 <script src="<?php echo public_url('assets/js/slider.js');?>"></script>
+<script src="<?php echo public_url('assets/js/events.js');?>"></script>
