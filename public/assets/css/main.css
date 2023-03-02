@@ -67,6 +67,11 @@ body {
   display: none;
 }
 
+.site .left-column .events.no-scroll .items-wrapper {
+  height: auto;
+  overflow: hidden;
+}
+
 .site .left-column  .events .scroll:last-child {
   margin-top: 20px;
 }

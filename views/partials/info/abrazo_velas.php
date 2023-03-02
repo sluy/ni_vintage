@@ -1,5 +1,5 @@
 <?php if(is_array($ctx['service']->abrazo_velas)) { ?>
-<div class='events<?php echo (count($ctx['service']->abrazo_velas) < 5) ? ' no-scroll' : '';?>'>
+<div class='events no-scroll'>
   <div class='scroll up'>
     &#x2191;
   </div>
