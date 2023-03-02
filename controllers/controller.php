@@ -9,6 +9,19 @@ class Controller {
         $this->setContext($ctx);
     }
 
+    public function query($key, $defaultValue = null) {
+        if (isset($_GET[$key])) {
+            $tmp = $_GET[$key];
+            if (is_string($tmp)) {
+                $tmp = trim($tmp);
+            }
+            if (!empty($tmp)) {
+                return $tmp;
+            }
+        }
+        return $defaultValue;
+    }
+
     protected function setContext($ctx = null) {
         $this->ctx = new stdClass();
         if (is_array($ctx)) {

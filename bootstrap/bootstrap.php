@@ -9,6 +9,7 @@ define('CONFIG_PATH', BASE_PATH . '/config');
 define('LIBS_PATH', BASE_PATH . '/libs');
 define('MODELS_PATH', BASE_PATH . '/models');
 define('CONTROLLERS_PATH', BASE_PATH . '/controllers');
+define('TMP_PATH', BASE_PATH . '/tmp');
 
 #defining table aliases
 define('T_SERVICES', 'servicios');
@@ -24,6 +25,8 @@ define('T_TRIBUTE_CONFIG', 'ni_homenajes');
 
 include_once(HELPERS_PATH . '/dump.php');
 include_once(HELPERS_PATH . '/url.php');
+include_once(HELPERS_PATH . '/file.php');
+include_once(HELPERS_PATH . '/image.php');
 
 #Bootstraping data to be used along app
 include_once(BOOTSTRAP_PATH . '/config.php');

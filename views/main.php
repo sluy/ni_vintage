@@ -1,7 +1,7 @@
 <?php
 echo '<!DOCTYPE html><html lang="es">';
 include_partial('head');
-echo '<body>';
+echo '<body style="background:url(\''.public_url("assets/images/vintage-desk-bg.jpg").'\')">';
 include_partial('slider');
 include_partial('info');
 include_partial('footer');

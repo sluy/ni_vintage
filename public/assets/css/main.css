@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .site {
   position: absolute;
   top: 0;
@@ -85,6 +92,8 @@
   display: block;
   width: 100%;
   height: auto;
+  max-height: 600px;
+  overflow-y: hidden;
 }
 
 .site .left-column ul.events li {

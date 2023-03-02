@@ -40,6 +40,7 @@ class Router {
                 if (!(class_exists('Controller', false))) {
                     include(CONTROLLERS_PATH . '/controller.php');
                 }
+
                 if (!(class_exists($ctrlClass, false))) {
                         if (!file_exists($ctrlPath)) {
                             return false;
