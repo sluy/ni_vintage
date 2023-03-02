@@ -5,8 +5,11 @@
   </div>
   <div class="items-wrapper">
     <ul id="event-list">
-      <?php foreach (array_reverse($ctx['service']->abrazo_velas) as $current) { ?>
-
+      <?php foreach (array_reverse($ctx['service']->abrazo_velas) as $i =>$current) {
+        if ($i > 4) {
+          break;
+        }
+      ?>
       <li>
         <div class="section avatar">
           <img src="<?php echo $current->imagen;?>" />
