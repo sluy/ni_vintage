@@ -23,6 +23,7 @@ define('T_TRIBUTE_CONFIG', 'ni_homenajes');
 
 
 include_once(HELPERS_PATH . '/dump.php');
+include_once(HELPERS_PATH . '/url.php');
 
 #Bootstraping data to be used along app
 include_once(BOOTSTRAP_PATH . '/config.php');
@@ -44,7 +45,6 @@ include_once(MODELS_PATH . '/wake.php');
 
 #Including useful helpers
 include_once(HELPERS_PATH . '/views.php');
-include_once(HELPERS_PATH . '/url.php');
 
 #Initialize main service data
 include_once(BOOTSTRAP_PATH . '/service.php');

@@ -113,6 +113,17 @@ class Service extends Model {
         return null;
     }
 
+    public function get_id_str_value() {
+        $id = $this->get('id');
+        if (is_string($id) || is_int($id)) {
+            $id = intval($id);
+            if ($id > 0) {
+                return md5($id);
+            }
+        }
+        return null;
+    }
+
     public function get_cliente_id_value($value) {
         if (is_string($value)) {
             $value = intval($value);
