@@ -122,6 +122,11 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
   $htmlContent[] = $html;
   $counter++;
 }
+//logo bg
+echo "\n" . '<div class="floating-center"><div class="brand-logo"><div class="wrapper"><img src="' .
+  public_url('assets/images/demo/logo.png') .
+  '"/></div></div></div>';
+//posts
 echo "\n" . '<div id="slider" style="width: 1000px; height:100vh;margin:0 auto;margin-bottom: 0px;">' . "\n" .
   '<div class="ls-slide" data-ls="kenburnsscale:1.2;">' . "\n" .
   implode("\n", array_reverse($htmlContent)) .

@@ -3,7 +3,7 @@
     <div class="row h-100">
       <div class="col-2 h-100">
         <div class="left-column h-100">
-          <?php include_partial('info/abrazo_velas');?>
+          <?php include_partial('test/info/abrazo_velas');?>
           <div class="brand-logo">
             <div class="wrapper">
               <img src="<?php echo public_url('assets/images/demo/logo.png');?>" />
@@ -14,8 +14,8 @@
       <div class="col-3 offset-7 h-100">
         <div class="right-column h-100">
           <div class="info">
-            <?php include_partial('info/fallecido_info');?>
-            <?php include_partial('info/destino');?>
+            <?php include_partial('test/info/fallecido_info');?>
+            <?php include_partial('test/info/destino');?>
             <!--
             <div class="data">
               <div class="title">
@@ -45,7 +45,7 @@
             </div>
             -->
           </div>
-          <?php include_partial('info/qrcode');?>
+          <?php include_partial('test/info/qrcode');?>
         </div>
       </div>
     </div>

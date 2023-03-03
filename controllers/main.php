@@ -10,7 +10,7 @@ class MainController extends Controller {
 
     public function test() {
         if ($this->ctx->service) {
-            include_view('main_new');
+            include_view('test');
         } else {
             echo 'not found';
         }
