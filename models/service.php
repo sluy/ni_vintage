@@ -232,9 +232,9 @@ class Service extends Model {
 
             if (is_string($data->message)) {
                 if (strpos($data->message, 'vela') !== false) {
-                    $data->message = 'Encendió una vela.';
+                    $data->message = 'Encendi贸 una vela.';
                 } else if (strpos($data->message, 'abrazo') !== false) {
-                    $data->message = 'Envió un abrazo.';
+                    $data->message = 'Envi贸 un abrazo.';
                 }
             }
 
@@ -262,8 +262,8 @@ class Service extends Model {
             $data->message_pos = 'right';
             $data->original_height = 0;
             $data->original_width = 0;
-            $data->height = 600;
-            $data->width = 400;
+            $data->height = 450;
+            $data->width = 650;
             $data->message = $current->mensaje;
             $data->type = 'text';
             $data->by = $current->nombre;
