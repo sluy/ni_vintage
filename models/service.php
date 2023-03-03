@@ -216,11 +216,33 @@ class Service extends Model {
         return null;
     }
 
-    public function get_posts_value($value, $existsKey) {
+    public function get_events_value($value, $existsKey) {
         if ($existsKey && is_array($value)) {
             return $value;
         }
         $res = [];
+        foreach($this->get('homenajes') as $current) {
+            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo === 0) {
+                continue;
+            }
+            $data = new stdClass();
+            $data->src = null;
+            $data->message = $current->mensaje;
+            $data->by = $current->nombre;
+            if ($current->predisenada) {
+                $data->src = $current->predisenada;
+            } else if ($current->foto) {
+                $data->src = 'https://ni.neo.fo/' . $current->foto;
+            }
+            $res[] = $data;
+        }
+        return $res;
+    }
+
+    public function get_posts_value($value, $existsKey) {
+        if ($existsKey && is_array($value)) {
+            return $value;
+        }
         $res = [];
         foreach ($this->get('homenajes') as $current) {
             if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0) {

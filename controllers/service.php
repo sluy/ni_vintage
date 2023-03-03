@@ -17,4 +17,8 @@ class ServiceController extends Controller {
     public function posts() {
         $this->json($this->service()->posts);
     }
+
+    public function events() {
+        $this->json($this->service()->events);
+    }
 }
