@@ -111,7 +111,7 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
         $html.= 'top:0;width:300px;';
       }
     } else {
-      $html .= 'top:0;left:0;';
+      $html .= 'width:100%;height:100%';
     }
     $html .= '"><div class="wrapper">' . $current->message . '</div></div>' . "\n";
   }
