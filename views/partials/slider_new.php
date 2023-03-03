@@ -94,10 +94,26 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
     'data-ls="' . str_replace('__DELAY__', $delay, $slideConfig[$counter]['data-ls']) . '">' . "\n" .
     '<div class="content">' . "\n" . "\t\t" ;
   if ($current->src) {
-      $html .= '<div class="picture" style="background-image: url(\''. url('compress?src=' . $current->src) .'\');background-position:'.($current->cover ? 'center center;background-size:cover' : 'top left; background-size:contain').';"></div>'  . "\n";
+    $html .= '<div class="picture" style="background-image: url(\''. url('compress?src=' . $current->src) .'\');';
+    if ($current->cover) {
+      $html .= 'background-position: center center; background-size:cover;';
+    } else {
+      $html .= 'background-position: top left; background-size: contain;';
+    }
+    $html .= '"></div>' . "\n";
   }
   if ($current->message) {
-      $html .= '<div class="message"><div class="wrapper">'.$current->message.'</div></div>'  . "\n";
+    $html .= '<div class="message" style="right:0;bottom:0;';
+    if ($current->src) {
+      if ($current->message_pos === 'bottom') {
+        $html.= 'left:0;height:300px;';
+      } else {
+        $html.= 'top:0;width:300px;';
+      }
+    } else {
+      $html .= 'top:0;left:0;';
+    }
+    $html .= '"><div class="wrapper">' . $current->message . '</div></div>' . "\n";
   }
   if ($current->by) {
       $html .= '<div class="by">'.$current->by.'</div>'  . "\n";

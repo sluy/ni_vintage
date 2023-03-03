@@ -223,11 +223,6 @@ body {
 
 .post > .content > .message {
   position: absolute;
-  right:0;
-  top:0;
-  bottom:0;
-  width: 100%;
-  max-width: 100%;
   padding: 20px;
   background: #cecece;
   font-size: 30px;
@@ -241,13 +236,14 @@ body {
 .post > .content > .message > .wrapper {
   white-space: pre-line;
   margin-left:20px;
+  font-family: "Times New Roman", Times, serif;
 }
+
 .post > .content > .picture + .message {
   width: 300px;
   background:#f1f1f1;
   font-size: 20px;
   display: block;
-  text-align: left;
   line-height: 30px;
 }
 

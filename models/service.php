@@ -228,6 +228,7 @@ class Service extends Model {
             }
             $data = new stdClass();
             $data->src = null;
+            $data->message_pos = 'right';
             $data->original_height = 0;
             $data->original_width = 0;
             $data->height = 600;
@@ -260,25 +261,40 @@ class Service extends Model {
 
                         if ($width > 1000) {
                             $ratio = (1000 * 100) / $width;
-                            $data->height = round(ceil(($data->height * $ratio)/100), 0);
-                            $data->width = round(ceil(($data->width * $ratio)/100), 0);
+                            $data->height = intval(round(ceil(($data->height * $ratio)/100), 0));
+                            $data->width = intval(round(ceil(($data->width * $ratio)/100), 0));
                         }
                         if ($data->height > 1000) {
                             $ratio = (1000 * 100) / $data->height;
-                            $data->height = round(ceil(($data->height * $ratio)/100), 0);
-                            $data->width = round(ceil(($data->width * $ratio)/100), 0);
+                            $data->height = intval(round(ceil(($data->height * $ratio)/100), 0));
+                            $data->width = intval(round(ceil(($data->width * $ratio)/100), 0));
                         }
                     }
                 } catch (\Throwable $th) {
                 //throw $th;
                 }
             }
-            if (intval($data->width) < 990 && !empty($data->message)) {
-                $data->width = intval($data->width) + 340;
-                if ($data->width > 1000) {
-                    $data->width = 1000;
+            if (!empty($data->message) && $data->type === 'picture') {
+                if ($data->width >= $data->height) {
+                    $data->message_pos = 'bottom';
+                    //Show down
+                    if ($data->height < 750) {
+                        $data->height += 340;
+                        if ($data->height > 750){
+                            $data->height = 750;
+                        }
+                        $data->cover = false;
+                    }
+                } else  {
+                    //Show right
+                    if ($data->width < 990 && !empty($data->message)) {
+                        $data->width += 340;
+                        if ($data->width > 1000) {
+                            $data->width = 1000;
+                        }
+                        $data->cover = false;
+                    }
                 }
-                $data->cover = false;
             }
             $res[] = $data;
         }
