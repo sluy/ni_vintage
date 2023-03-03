@@ -117,7 +117,7 @@ body {
 }
 
 .site .right-column .qr-code a, a:visited {
-  font-size: 15px;
+  font-size: 20px;
   color: #333;
   text-decoration: none;
   display: block;
@@ -258,6 +258,7 @@ body {
   font-size: 15px;
   line-height: 15px;
   font-style: italic;
+  font-weight: bold;
 }
 
 .floating-center {
