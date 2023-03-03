@@ -232,9 +232,9 @@ class Service extends Model {
             $data->original_width = 0;
             $data->height = 1000;
             $data->width = 700;
-            $data->message = '';
+            $data->message = $current->mensaje;
             $data->type = 'text';
-            $data->by = 'Lorem Ipsum';
+            $data->by = $current->nombre;
             if ($current->link_video) {
                 $data->type = 'video';
                 $data->src = $current->link_video;
@@ -245,7 +245,6 @@ class Service extends Model {
                 $data->type = 'picture';
                 $data->src = 'https://ni.neo.fo/' . $current->foto;
             }
-            //Obtener mensaje por acá
             if ($data->type === 'text' && empty($data->message)) {
                 continue;
             }
