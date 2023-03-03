@@ -7,4 +7,12 @@ class MainController extends Controller {
             echo 'not found';
         }
     }
+
+    public function test() {
+        if ($this->ctx->service) {
+            include_view('main_new');
+        } else {
+            echo 'not found';
+        }
+    }
 }
