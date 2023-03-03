@@ -235,6 +235,7 @@ class Service extends Model {
             $data->message = $current->mensaje;
             $data->type = 'text';
             $data->by = $current->nombre;
+            $data->cover = true;
             if ($current->link_video) {
                 $data->type = 'video';
                 $data->src = $current->link_video;
@@ -271,6 +272,10 @@ class Service extends Model {
                 } catch (\Throwable $th) {
                 //throw $th;
                 }
+            }
+            if (intval($data->width) < 990 && !empty($data->message)) {
+                $data->width = 1000;
+                $data->cover = false;
             }
             $res[] = $data;
         }

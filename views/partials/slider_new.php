@@ -94,7 +94,7 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
     'data-ls="' . str_replace('__DELAY__', $delay, $slideConfig[$counter]['data-ls']) . '">' . "\n" .
     '<div class="content">' . "\n" . "\t\t" ;
   if ($current->src) {
-      $html .= '<div class="picture" style="background-image: url(\''. url('compress?src=' . $current->src) .'\')"></div>'  . "\n";
+      $html .= '<div class="picture" style="background-image: url(\''. url('compress?src=' . $current->src) .'\');background-position:'.($current->cover ? 'center center;background-size:cover;' : 'top center').';"></div>'  . "\n";
   }
   if ($current->message) {
       $html .= '<div class="message"><div class="wrapper">'.$current->message.'</div></div>'  . "\n";

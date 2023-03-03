@@ -219,9 +219,6 @@ body {
   top:0;
   bottom:0;
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
 }
 
 .post > .content > .message {
