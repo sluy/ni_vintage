@@ -232,9 +232,9 @@ class Service extends Model {
 
             if (is_string($data->message)) {
                 if (strpos($data->message, 'vela') !== false) {
-                    $data->message = 'Encendi贸 una vela.';
+                    $data->message = 'Encendi&oacute; una vela.';
                 } else if (strpos($data->message, 'abrazo') !== false) {
-                    $data->message = 'Envi贸 un abrazo.';
+                    $data->message = 'Envi&oacute; un abrazo.';
                 }
             }
 
