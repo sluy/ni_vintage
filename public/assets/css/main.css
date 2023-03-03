@@ -41,7 +41,7 @@ body {
 }
 
 .site .left-column .events .items-wrapper {
-  height: 640px;
+  height: 704px;
   overflow: hidden;
   padding: 15px;
   margin-top: -15px;
@@ -74,7 +74,6 @@ body {
 
 
 .site .left-column .events.no-scroll .items-wrapper {
-  height: auto;
   overflow: hidden;
 }
 
@@ -165,7 +164,7 @@ body {
 }
 
 .site .left-column .events .items-wrapper ul li .section.data {
-  max-width:200px;
+  max-width:160px;
 }
 
 .site .left-column .events .items-wrapper ul li .section:not(:last-child) {
@@ -261,7 +260,6 @@ body {
   font-style: italic;
 }
 
-
 .floating-center {
   position: absolute;
   top:50%;
@@ -270,4 +268,9 @@ body {
   margin-top: -60px;
   width: 340px;
   height: 200px;
+}
+
+.floating-center img {
+  width: 100%;
+  height:auto;
 }
