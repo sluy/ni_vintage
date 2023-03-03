@@ -108,6 +108,6 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
 }
 echo "\n" . '<div id="slider" style="width: 1000px; height:100vh;margin:0 auto;margin-bottom: 0px;">' . "\n" .
   '<div class="ls-slide" data-ls="kenburnsscale:1.2;">' . "\n" .
-  implode("\n", $htmlContent) .
+  implode("\n", array_reverse($htmlContent)) .
   '</div></div>';
 ?>
