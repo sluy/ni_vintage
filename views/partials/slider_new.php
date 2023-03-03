@@ -97,7 +97,7 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
       $html .= '<div class="picture" style="background-image: url(\''. url('compress?src=' . $current->src) .'\')"></div>'  . "\n";
   }
   if ($current->message) {
-      $html .= '<div class="message">'.$current->message.'</div>'  . "\n";
+      $html .= '<div class="message"><div class="wrapper">'.$current->message.'</div></div>'  . "\n";
   }
   if ($current->by) {
       $html .= '<div class="by">'.$current->by.'</div>'  . "\n";
