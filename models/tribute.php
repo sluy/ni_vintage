@@ -28,7 +28,7 @@ class Tribute extends Model {
         if (is_string($value)) {
             $value = trim($value);
             if ($value !== '') {
-                $value;
+                return $value;
             }
         }
         return null;
@@ -37,7 +37,7 @@ class Tribute extends Model {
         if (is_string($value)) {
             $value = trim($value);
             if ($value !== '') {
-                $value;
+                return $value;
             }
         }
         return null;
@@ -47,7 +47,7 @@ class Tribute extends Model {
         if (is_string($value)) {
             $value = trim($value);
             if ($value !== '') {
-                $value;
+                return $value;
             }
         }
         return null;
@@ -57,7 +57,7 @@ class Tribute extends Model {
         if (is_string($value)) {
             $value = trim($value);
             if ($value !== '') {
-                $value;
+                return $value;
             }
         }
         return null;
@@ -67,7 +67,7 @@ class Tribute extends Model {
         if (is_string($value)) {
             $value = trim($value);
             if ($value !== '') {
-                $value;
+                return $value;
             }
         }
         return null;
@@ -77,7 +77,7 @@ class Tribute extends Model {
         if (is_string($value)) {
             $value = trim($value);
             if ($value !== '') {
-                $value;
+                return $value;
             }
         }
         return null;
