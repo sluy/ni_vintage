@@ -15,7 +15,7 @@
           <img src="<?php echo $current->imagen;?>" />
         </div>
         <div class="section data">
-          <div class="title"><?php echo $current->nombre ;?></div>
+          <div class="title"><?php echo $current->nombre;?></div>
           <div class="content">
             <?php if ($current->tipo === 2) { ?>
             Envió un abrazo
