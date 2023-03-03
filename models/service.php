@@ -229,6 +229,15 @@ class Service extends Model {
             $data->src = null;
             $data->message = $current->mensaje;
             $data->by = $current->nombre;
+
+            if (is_string($data->message)) {
+                if (strpos($data->message, 'vela') !== false) {
+                    $data->message = 'Encendió una vela.';
+                } else if (strpos($data->message, 'abrazo') !== false) {
+                    $data->message = 'Envió un abrazo.';
+                }
+            }
+
             if ($current->predisenada) {
                 $data->src = $current->predisenada;
             } else if ($current->foto) {
