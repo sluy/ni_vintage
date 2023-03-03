@@ -230,8 +230,8 @@ class Service extends Model {
             $data->src = null;
             $data->original_height = 0;
             $data->original_width = 0;
-            $data->height = 1000;
-            $data->width = 700;
+            $data->height = 600;
+            $data->width = 400;
             $data->message = $current->mensaje;
             $data->type = 'text';
             $data->by = $current->nombre;
@@ -274,7 +274,10 @@ class Service extends Model {
                 }
             }
             if (intval($data->width) < 990 && !empty($data->message)) {
-                $data->width = 1000;
+                $data->width = intval($data->width) + 340;
+                if ($data->width > 1000) {
+                    $data->width = 1000;
+                }
                 $data->cover = false;
             }
             $res[] = $data;
