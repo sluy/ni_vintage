@@ -1,135 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<title>Homenajes</title>
-	<!-- Bootstrap -->
-	<link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="./assets/css/main.css" rel="stylesheet">
+	<title>Vintage Photos</title>
+
 	<!-- LayerSlider CSS -->
-	<link rel="stylesheet" href="./vendor/layerslider/css/layerslider.css">
+	<link rel="stylesheet" href="public/vendor/layerslider/css/layerslider.css">
+	<link rel="stylesheet" href="public/assets/css/main.css">
+
+	<!-- External libraries: jQuery & GreenSock -->
+	<script src="public/vendor/layerslider/js/jquery.js"></script>
+	<script src="public/vendor/layerslider/js/layerslider.utils.js"></script>
+
+	<!-- LayerSlider script files -->
+	<script src="public/vendor/layerslider/js/layerslider.transitions.js"></script>
+	<script src="public/vendor/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
 </head>
+
 <body>
 
 	<!-- Slider HTML markup -->
-	<div id="slider" style="width: 1000px; height:100vh;margin:0 auto;margin-bottom: 0px;">
-
-
+	<div id="slider" style="width:1000px;height:100vh;margin:0 auto;margin-bottom: 0px;">
 		<!-- Slide 1-->
 		<div class="ls-slide" data-ls="kenburnsscale:1.2;">
-			<img width="1100" height="733" src="assets/images/vintage-5.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:80%; left:10%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:left;   offsetyin:bottom;   durationin:5500;                    easingin:easeOutQuad; fadein:false; rotatein:10; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:970;     loopoffsety:-310;   loopduration:4000;      loopstartat:transitioninstart + 73000;  loopeasing:easeInOutQuart; looprotate:20;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-20; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="825" src="assets/images/vintage-10.jpg"  class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:8%;  left:80%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:right;  offsetyin:top;      durationin:5500; delayin:100;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-450;    loopoffsety:950;    loopduration:4000;      loopstartat:transitioninstart + 69000;  loopeasing:easeInOutQuart; looprotate:-10;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;">
-			<img width="769" height="1100" src="assets/images/vintage-9.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:80%; left:80%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:right;  offsetyin:bottom;   durationin:5500; delayin:500;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-550;    loopoffsety:-650;   loopduration:4000;      loopstartat:transitioninstart + 65000;  loopeasing:easeInOutQuart; looprotate:5;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-5; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="733" src="assets/images/vintage-4.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:20%; left:25%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:left;   offsetyin:top;      durationin:5500; delayin:900;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:400;     loopoffsety:750;    loopduration:4000;      loopstartat:transitioninstart + 61000;  loopeasing:easeInOutQuart; looprotate:8;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-8; scaleX:.5; scaleY:.5;">
-			<img width="878" height="1100" src="assets/images/vintage-8.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:40%; left:94%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:right;                      durationin:5500; delayin:1300;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-900;    loopoffsety:170;    loopduration:4000;      loopstartat:transitioninstart + 57000;  loopeasing:easeInOutQuart; looprotate:2;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-2; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="825" src="assets/images/vintage-3.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:90%; left:50%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:1700;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-50;     loopoffsety:-750;   loopduration:4000;      loopstartat:transitioninstart + 53000;  loopeasing:easeInOutQuart; looprotate:-2;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:2; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="733" src="assets/images/vintage-7.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:50%; left:20%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:left;                       durationin:5500; delayin:2100;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:600;                         loopduration:4000;      loopstartat:transitioninstart + 49000;  loopeasing:easeInOutQuart; looprotate:-7;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:7; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="734" src="assets/images/vintage-1.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:15%; left:60%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:top;                        durationin:5500; delayin:2500;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-80;     loopoffsety:800;    loopduration:4000;      loopstartat:transitioninstart + 45000;  loopeasing:easeInOutQuart; looprotate:-10;             loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="733" src="assets/images/vintage-6.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:70%; left:60%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:2900;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-170;    loopoffsety:-340;   loopduration:4000;      loopstartat:transitioninstart + 41000;  loopeasing:easeInOutQuart; looprotate:4;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-4; scaleX:.5; scaleY:.5;">
-			<img width="733" height="1100" src="assets/images/vintage-2.jpg"   class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:47%; left:55%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:right;                      durationin:5500; delayin:3300;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-90;     loopoffsety:50;     loopduration:4000;      loopstartat:transitioninstart + 37000;  loopeasing:easeInOutQuart; looprotate:-3;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:3; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="733" src="assets/images/1.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:80%; left:10%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:left;   offsetyin:bottom;   durationin:5500; delayin:3700;      easingin:easeOutQuad; fadein:false; rotatein:10; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:970;     loopoffsety:-310;   loopduration:4000;      loopstartat:transitioninstart + 33000;  loopeasing:easeInOutQuart; looprotate:20;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-20; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="825" src="assets/images/2.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:8%;  left:80%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:right;  offsetyin:top;      durationin:5500; delayin:4100;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-450;    loopoffsety:950;    loopduration:4000;      loopstartat:transitioninstart + 29000;  loopeasing:easeInOutQuart; looprotate:-10;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;">
-			<img width="769" height="1100" src="assets/images/3.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:80%; left:80%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:right;  offsetyin:bottom;   durationin:5500; delayin:4500;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-550;    loopoffsety:-650;   loopduration:4000;      loopstartat:transitioninstart + 25000;  loopeasing:easeInOutQuart; looprotate:5;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-5; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="733" src="assets/images/4.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:20%; left:25%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:left;   offsetyin:top;      durationin:5500; delayin:4900;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:400;     loopoffsety:750;    loopduration:4000;      loopstartat:transitioninstart + 21000;  loopeasing:easeInOutQuart; looprotate:8;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-8; scaleX:.5; scaleY:.5;">
-			<img width="878" height="1100" src="assets/images/5.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:40%; left:94%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:right;                      durationin:5500; delayin:5300;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-900;    loopoffsety:170;    loopduration:4000;      loopstartat:transitioninstart + 17000;  loopeasing:easeInOutQuart; looprotate:2;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-2; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="825" src="assets/images/6.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:90%; left:50%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:5700;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-50;     loopoffsety:-750;   loopduration:4000;      loopstartat:transitioninstart + 13000;  loopeasing:easeInOutQuart; looprotate:-2;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:2; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="733" src="assets/images/7.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:50%; left:20%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:left;                       durationin:5500; delayin:6100;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:600;                         loopduration:4000;      loopstartat:transitioninstart + 9000;  loopeasing:easeInOutQuart; looprotate:-7;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:7; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="734" src="assets/images/8.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:15%; left:60%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:top;                        durationin:5500; delayin:6500;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-80;     loopoffsety:800;    loopduration:4000;      loopstartat:transitioninstart + 5000;  loopeasing:easeInOutQuart; looprotate:-10;             loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;">
-			<img width="1100" height="733" src="assets/images/9.jpg"           class="ls-l" alt="" style="border: 20px solid #eee; box-shadow: 0px 4px 30px rgba(0,0,0,.3);top:70%; left:60%; text-align:initial; font-weight:400; font-style:normal; text-decoration:none; filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:6900;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-170;    loopoffsety:-340;   loopduration:4000;      loopstartat:transitioninstart + 1000;  loopeasing:easeInOutQuart; looprotate:4;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-4; scaleX:.5; scaleY:.5;">
-		</div>
-	</div>
-
-	<div class="site">
-		<div class="container-fluid h-100">
-			<div class="row h-100">
-				<div class="col-2 h-100">
-					<div class="left-column h-100">
-						<ul class="events">
-							<li>
-								<div class="section avatar">
-									<img src="./assets/images/demo/vela.png" />
-								</div>
-								<div class="section data">
-									<div class="title">Lorem Ipsum</div>
-									<div class="content">Dolor sit amet</div>
-								</div>
-							</li>
-							<li>
-								<div class="section avatar">
-									<img src="./assets/images/demo/abrazo.png" />
-								</div>
-								<div class="section data">
-									<div class="title">Lorem Ipsum</div>
-									<div class="content">Dolor sit amet</div>
-								</div>
-							</li>
-						</ul>
-						<div class="brand-logo">
-							<img src="./assets/images/demo/logo.png"/>
-						</div>
+			<div class="ls-l post" alt="" style="top:50%; left:20%;width:1100px;height:733px;filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetxin:left;                       durationin:5500; delayin:6100;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:600;                         loopduration:4000;      loopstartat:transitioninstart + 9000;  loopeasing:easeInOutQuart; looprotate:-7;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:7; scaleX:.5; scaleY:.5;">
+				<div class="content">
+					<div class="message">
+						Lorem ipsum dolor sit amet
+					</div>
+					<div class="by">
+						Stefan Luy
 					</div>
 				</div>
-				<div class="col-2 offset-8 h-100">
-					<div class="right-column h-100">
-						<div class="info">
-							<div class="data">
-								<div class="avatar">
-									<div class="image" style="background-image:url('./assets/images/demo/avatar.jpg');"></div>
-								</div>
-								<div class="title">
-									Pedro <br>
-									Perez <br>
-									<small class="text-muted">Q.E.P.D</small>
-									<br>
-									<br>
-								</div>
-							</div>
-							<div class="data">
-								<div class="title">
-									Velatorios
-								</div>
-								<div class="content">
-									No hay información
-								</div>
-							</div>
-
-							<div class="data">
-								<div class="title">
-									Salida
-								</div>
-								<div class="content">
-									Día 30 a las 13:00 hs.
-								</div>
-							</div>
-
-							<div class="data">
-								<div class="title">
-									Cementerio
-								</div>
-								<div class="content">
-									Cemex<br>
-									Día 31 a las 13:00 hs.
-								</div>
-							</div>
-
-							<div class="data">
-								<div class="title">
-									Misa
-								</div>
-								<div class="content">
-									Capilla San Pablo<br>
-									Día 17 a las 13:00 hs.
-								</div>
-							</div>
-
-						</div>
-						<div class="qr-code">
-							<img src="./assets/images/demo/qr-code.png" />
-							<a href="#somethingHere">
-								Homenaje Virtual<br>
-								neo.fo/14bdbabf
-							</a>
-						</div>
+			</div>
+			<div class="ls-l post" alt="" style="top:15%; left:60%;width:1100px;height:733px;filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:top;                        durationin:5500; delayin:6500;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-80;     loopoffsety:800;    loopduration:4000;      loopstartat:transitioninstart + 5000;  loopeasing:easeInOutQuart; looprotate:-10;             loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;">
+				<div class="content">
+					<div class="picture" style="background-image: url('public/assets/images/5.jpg');"></div>
+					<div class="message">
+						Lorem ipsum dolor sit amet
+					</div>
+					<div class="by">
+						Stefan Luy
+					</div>
+				</div>
+			</div>
+			<div class="ls-l post" alt=""
+				style="top:70%;left:60%;width:1100px;height:733px;filter:grayscale(100%) sepia(30%);" data-ls="showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:6900;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-170;    loopoffsety:-340;   loopduration:4000;      loopstartat:transitioninstart + 1000;  loopeasing:easeInOutQuart; looprotate:4;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-4; scaleX:.5; scaleY:.5;">
+				<div class="content">
+					<div class="picture" style="background-image: url('public/assets/images/6.jpg');"></div>
+					<div class="by">
+						Stefan Luy
 					</div>
 				</div>
 			</div>
@@ -137,46 +58,32 @@
 	</div>
 
 
-
-
-	<!-- External libraries: jQuery & GreenSock -->
-	<script src="./vendor/layerslider/js/jquery.js"></script>
-	<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-	<script src="./vendor/layerslider/js/layerslider.utils.js"></script>
-
-	<!-- LayerSlider script files -->
-	<script src="./vendor/layerslider/js/layerslider.transitions.js"></script>
-	<script src="./vendor/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
-
 	<!-- Initializing the slider -->
 	<script type="text/javascript">
-		$(document).ready(function() {
-				const query = new Proxy(new URLSearchParams(window.location.search), {
-					get: (searchParams, prop) => searchParams.get(prop),
-				});
 
-				if (['false', '0'].includes(query.show_info)) {
-					$('.site').css('display', 'none');
-				}
+		$(document).ready(function () {
 
-				$("#slider").on('slideTimelineDidComplete', function (event, slider) {
-					slider.api('replay');
-				});
+			$("#slider").on('slideTimelineDidComplete', function (event, slider) {
+				slider.api('replay');
 
-				$('#slider').layerSlider({
-					sliderVersion: '6.6.4',
-					type: 'fullsize',
-					fullSizeMode: 'hero',
-					skin: 'v6',
-					globalBGImage: 'assets/images/vintage-desk-bg.jpg',
-					globalBGSize: 'cover',
-					showCircleTimer: false,
-					allowRestartOnResize: true,
-					skinsPath: './vendor/layerslider/skins/',
-					height: 1000
-				});
+			});
+
+
+			$('#slider').layerSlider({
+				sliderVersion: '6.6.4',
+				type: 'fullsize',
+				fullSizeMode: 'hero',
+				skin: 'v6',
+				globalBGImage: 'public/assets/images/vintage-desk-bg.jpg',
+				globalBGSize: 'cover',
+				showCircleTimer: false,
+				allowRestartOnResize: true,
+				skinsPath: 'public/vendor/layerslider/skins/',
+				height: 1000
+			});
 		});
+
 	</script>
 </body>
+
 </html>

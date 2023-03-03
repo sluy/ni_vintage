@@ -14,4 +14,7 @@ class ServiceController extends Controller {
         $this->json($this->service()->toArray());
     }
 
+    public function posts() {
+        $this->json($this->service()->posts);
+    }
 }

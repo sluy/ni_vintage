@@ -216,6 +216,67 @@ class Service extends Model {
         return null;
     }
 
+    public function get_posts_value($value, $existsKey) {
+        if ($existsKey && is_array($value)) {
+            return $value;
+        }
+        $res = [];
+        $res = [];
+        foreach ($this->get('homenajes') as $current) {
+            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0) {
+                continue;
+            }
+            $data = new stdClass();
+            $data->src = null;
+            $data->original_height = 0;
+            $data->original_width = 0;
+            $data->height = 1000;
+            $data->width = 700;
+            $data->message = '';
+            $data->type = 'text';
+            $data->by = 'Lorem Ipsum';
+            if ($current->link_video) {
+                $data->type = 'video';
+                $data->src = $current->link_video;
+            } else if ($current->predisenada) {
+                $data->type = 'picture';
+                $data->src = $current->predisenada;
+            } else if ($current->foto) {
+                $data->type = 'picture';
+                $data->src = 'https://ni.neo.fo/' . $current->foto;
+            }
+            //Obtener mensaje por acá
+            if ($data->type === 'text' && empty($data->message)) {
+                continue;
+            }
+            if ($data->type === 'picture') {
+                try {
+                    list($width, $height, $type, $attr) = getimagesize($data->src);
+                    if ($width > 0 && $height > 0) {
+                        $data->original_height = $height;
+                        $data->original_width = $width;
+                        $data->height = $height;
+                        $data->width = $width;
+
+                        if ($width > 1000) {
+                            $ratio = (1000 * 100) / $width;
+                            $data->height = round(ceil(($data->height * $ratio)/100), 0);
+                            $data->width = round(ceil(($data->width * $ratio)/100), 0);
+                        }
+                        if ($data->height > 1000) {
+                            $ratio = (1000 * 100) / $data->height;
+                            $data->height = round(ceil(($data->height * $ratio)/100), 0);
+                            $data->width = round(ceil(($data->width * $ratio)/100), 0);
+                        }
+                    }
+                } catch (\Throwable $th) {
+                //throw $th;
+                }
+            }
+            $res[] = $data;
+        }
+        return $res;
+    }
 
     public function get_image_posts_value($value, $existsKey) {
         if ($existsKey && is_array($value)) {
