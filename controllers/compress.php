@@ -2,35 +2,52 @@
 
 class CompressController extends Controller {
 
-    public function index() {
-        $url = $this->query('src');
-        $test = $this->query('test');
 
-        $compressFactor = intval($this->query('percent'));
+    protected function encodeUrl($raw) {
+      if(!is_string($raw)) {
+      	return '';
+      }
+      $sections = explode('/', $raw);
+      $filename = array_pop($sections);
+      $filename = str_replace(' ', '%20', $filename);
+      $sections[] = $filename;
+      return implode('/', $sections);
+    }
+
+    protected function parseCompressFactor($raw) {
+    	$raw = intval($raw);
         //Setting default;
-        if ($compressFactor < 1) {
-            $compressFactor = 5;
+        if ($raw < 1) {
+            $raw = 5;
         }
-        if ($compressFactor > 9) {
-            $compressFactor = 9;
+        if ($raw > 9) {
+            $raw = 9;
         }
+        return $raw;
+    }
 
-        if (!is_string($url) && empty($url)) {
+    public function index() {
+        $url = $this->encodeUrl($this->query('src'));
+        $test = $this->query('test') === 'true';
+        $compressFactor = $this->parseCompressFactor($this->query('percent'));
+        if (empty($url)) {
             return $this->json(['message' => 'unknown image.'], 404);
         }
+
         $filename = @array_pop(explode('/', $url));
         $id = md5($url) . '-' . $compressFactor . '.jpg';
-        $uncompressedPath = TMP_PATH . '/uncompressed/' . $filename;
-        $thumbPath = TMP_PATH . '/thumb/' . $filename;
+        $uncompressedPath = TMP_PATH . '/uncompressed/' . $id;
+        $thumbPath = TMP_PATH . '/thumb/' . $id;
         $compressedPath = TMP_PATH . '/compressed/'.  $id;
         if (!file_exists($compressedPath)) {
             try {
-                $content = file_get_contents(urlencode($url));
-                if (!tmp_file('uncompressed/' . $filename, $content)) {
+                $content = file_get_contents($url);
+                if ($content === false) {
+                	return $this->json(['message' => 'cannot read original file', 'url' => $url], 500);
+                }
+                if (!tmp_file('uncompressed/' . $id, $content)) {
                     return $this->json(['message' => 'cannot store uncompressed file (write perms?)'], 500);
                 }
-
-
                 $info = getimagesize($uncompressedPath);
                 if (!$info) {
                     return $this->json(['message' => 'cannot read uncompressed file.'], 500);
