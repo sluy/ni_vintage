@@ -17,7 +17,8 @@ const query = new Proxy(new URLSearchParams(window.location.search), {
   get: (searchParams, prop) => searchParams.get(prop),
 });
 </script>
-<script src="<?php echo public_url('assets/js/helpers.js');?>"></script>
-<script src="<?php echo public_url('assets/js/api.js');?>"></script>
+<script src="<?php echo public_url('assets/js/helpers.js?r='. md5(rand(100000, 999999)));?>"></script>
+<script src="<?php echo public_url('assets/js/api.js?r='. md5(rand(100000, 999999)));?>"></script>
+<script src="<?php echo public_url('assets/js/events.js?r='. md5(rand(100000, 999999)));?>"></script>
+
 <script src="<?php echo public_url('assets/js/slider.js');?>"></script>
-<script src="<?php echo public_url('assets/js/events.js');?>"></script>

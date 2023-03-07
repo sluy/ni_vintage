@@ -38,12 +38,15 @@ body {
 }
 .brand-logo {
   padding: 15px;
+  padding-left: 0px;
 }
 
 .site .left-column .events .items-wrapper {
-  height: 815px;
+  height: 0px;
   overflow: hidden;
+  opacity: 0;
   padding: 15px;
+  padding-left: 0px;
   margin-top: -15px;
 }
 
@@ -135,6 +138,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
+  transition: margin 500ms;
 }
 
 .site .left-column .events .items-wrapper ul li {

@@ -1,8 +1,5 @@
 <?php if(is_array($ctx['service']->events) && !empty($ctx['service']->events)) { ?>
 <div class='events no-scroll'>
-  <div class='scroll up'>
-    &#x2191;
-  </div>
   <div class="items-wrapper">
     <ul id="event-list">
       <?php foreach (array_reverse($ctx['service']->events) as $current) {?>
@@ -17,9 +14,6 @@
       </li>
       <?php }?>
     </ul>
-  </div>
-  <div class='scroll down'>
-    &#8595;
   </div>
 </div>
 <?php  }?>
