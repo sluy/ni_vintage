@@ -23,6 +23,16 @@ class Model {
     public static function db(): \PDO {
         return $GLOBALS['db'];
     }
+
+    /**
+     * Returns first row with provided conditions.
+     * @param mixed $where Where clausules to apply.
+     * @return self|null
+     */
+    public static function first($where = null) {
+        $tmp = self::many($where, $limit = 1);
+        return count($tmp) > 0 ? $tmp[0] : null;
+    }
     /**
      *
      * Returns a collection of current model.

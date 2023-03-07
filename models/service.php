@@ -248,6 +248,24 @@ class Service extends Model {
         return $res;
     }
 
+    public function get_ni($value, $existsKey) {
+        if ($existsKey && is_array($value)) {
+            return $value;
+        }
+        return $this->set('ni', Tribute::many([
+            'cliente_id' => $this->get('cliente_id')
+        ]));
+    }
+
+    public function get_company_value($value, $existsKey) {
+        if ($existsKey && is_array($value)) {
+            return $value;
+        }
+        return $this->set('company', Tribute::first([
+            'id_cliente' => $this->get('cliente_id')
+        ]));
+    }
+
     public function get_posts_value($value, $existsKey) {
         if ($existsKey && is_array($value)) {
             return $value;

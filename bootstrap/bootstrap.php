@@ -21,6 +21,8 @@ define('T_WAKES', 'velatorios');
 define('T_EVENTS', 'abrazo_vela');
 define('T_TRIBUTE', 'homenajes');
 define('T_TRIBUTE_CONFIG', 'ni_homenajes');
+define('T_NI', 'ni');
+define('T_COMPANIES', 'empresa');
 
 
 include_once(HELPERS_PATH . '/dump.php');
@@ -36,10 +38,12 @@ include_once(LIBS_PATH . '/router.php');
 
 #Data-Models
 include_once(MODELS_PATH . '/model.php');
+include_once(MODELS_PATH . '/company.php');
 include_once(MODELS_PATH . '/destination.php');
 include_once(MODELS_PATH . '/epitaph.php');
 include_once(MODELS_PATH . '/event.php');
 include_once(MODELS_PATH . '/mass.php');
+include_once(MODELS_PATH . '/ni.php');
 include_once(MODELS_PATH . '/room.php');
 include_once(MODELS_PATH . '/service.php');
 include_once(MODELS_PATH . '/tribute_config.php');
