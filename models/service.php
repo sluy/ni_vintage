@@ -271,6 +271,8 @@ class Service extends Model {
             return $value;
         }
         $res = [];
+
+        $lettersPerLine = 30;
         foreach ($this->get('homenajes') as $current) {
             if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0) {
                 continue;
@@ -286,6 +288,19 @@ class Service extends Model {
             $data->type = 'text';
             $data->by = $current->nombre;
             $data->cover = true;
+            $data->fontSize = 25;
+
+            if ($data->message) {
+                $lines = intval(strlen($data->message) / $lettersPerLine) + 1;
+                if ($lines > 6) {
+                    $lines = $lines - 6;
+                    $data->fontSize = 25 - $lines;
+                    if ($data->fontSize < 7) {
+                        $data->fontsize = 7;
+                    }
+                }
+            }
+
             if ($current->link_video) {
                 $data->type = 'video';
                 $data->src = $current->link_video;
