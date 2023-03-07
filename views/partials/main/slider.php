@@ -123,7 +123,7 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
   $counter++;
 }
 //logo bg
-echo "\n" . '<div class="floating-center"><img src="' .public_url('assets/images/demo/logo.png') .'"/></div>';
+echo "\n" . '<div class="floating-center"><img src="' . $ctx['service']->ni->logo_src .'"/></div>';
 //posts
 echo "\n" . '<div id="slider" style="width: 1000px; height:100vh;margin:0 auto;margin-bottom: 0px;">' . "\n" .
   '<div class="ls-slide" data-ls="kenburnsscale:1.2;">' . "\n" .

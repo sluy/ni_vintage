@@ -4,11 +4,7 @@
       <div class="col-2 h-100">
         <div class="left-column h-100">
           <?php include_partial('main/info/abrazo_velas');?>
-          <div class="brand-logo">
-            <div class="wrapper">
-              <img src="<?php echo public_url('assets/images/demo/logo.png');?>" />
-            </div>
-          </div>
+          <?php include_partial('main/info/brand');?>
         </div>
       </div>
       <div class="col-3 offset-7 h-100">
