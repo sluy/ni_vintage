@@ -113,10 +113,10 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
     } else {
       $html .= 'width:100%;height:100%';
     }
-    $html .= '"><div class="wrapper">' . $current->message . '</div></div>' . "\n";
+    $html .= '"><div class="wrapper">' . htmlspecialchars($current->message) . '</div></div>' . "\n";
   }
   if ($current->by) {
-      $html .= '<div class="by">'.$current->by.'</div>'  . "\n";
+      $html .= '<div class="by">'.htmlspecialchars($current->by).'</div>'  . "\n";
   }
   $html .= '</div>' . "\n" . '</div>';
   $htmlContent[] = $html;
