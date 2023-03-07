@@ -76,7 +76,7 @@ const events = {
         if ($ul.length < 1 || $ul.parent().height() >= $ul.height()) {
           return;
         }
-        const movement = $ul.parent().outerHeight();
+        const movement = events.slider.items.height;
         let current = parseInt($ul.css("margin-top"));
         if (isNaN(current)) {
           current = 0;
