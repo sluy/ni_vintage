@@ -295,11 +295,11 @@ class Service extends Model {
                 $lines = intval(strlen($data->message) / $lettersPerLine) + 1;
                 if ($lines > 6) {
                     $lines = $lines - 6;
-                    $data->fontSize = 25 - $lines;
-                    if ($data->fontSize < 7) {
-                        $data->fontSize = 7;
+                    $data->fontSize = intval(25 - ($lines/2));
+                    if ($data->fontSize < 12) {
+                        $data->fontSize = 12;
                     }
-                    $data->lineHeight = $data->fontSize + 4;
+                    $data->lineHeight = $data->fontSize + 3;
                 }
             }
 
