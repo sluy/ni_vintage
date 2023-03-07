@@ -2,6 +2,9 @@ const events = {
   slider: {
     timer: 0,
     seconds: 15,
+    items: {
+      height: 90,
+    },
     stop: () => {
       if (events.slider.timer) {
         setTimeout(events.slider.timer);
@@ -48,7 +51,14 @@ const events = {
           const $events = $wrapper.parent();
 
           const leftSideHeight = $events.parent().height();
-          const availableHeight = leftSideHeight - $brand.outerHeight();
+          let availableHeight = leftSideHeight - $brand.outerHeight();
+
+          let qty = Math.floor(availableHeight / events.slider.items.height);
+          if (qty < 1) {
+            qty = 1;
+          }
+          availableHeight = qty * events.slider.items.height;
+          console.log("showing ", qty, availableHeight);
           setTimeout(() => {
             $wrapper.css("height", availableHeight + "px");
             $wrapper.css("opacity", "1");

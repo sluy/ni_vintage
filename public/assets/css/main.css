@@ -189,6 +189,12 @@ body {
 
 .site .left-column .events .items-wrapper ul li .data .title {
   color: #000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 160px;
+  max-height: 25px;
+  overflow: hidden;
+
   font-weight: bold;
 }
 
