@@ -5,9 +5,7 @@ class CompressController extends Controller {
     public function index() {
         $url = $this->query('src');
         $test = $this->query('test');
-        if ($test === 'true') {
-            dump($url);
-        }
+
         $compressFactor = intval($this->query('percent'));
         //Setting default;
         if ($compressFactor < 1) {
@@ -27,7 +25,7 @@ class CompressController extends Controller {
         $compressedPath = TMP_PATH . '/compressed/'.  $id;
         if (!file_exists($compressedPath)) {
             try {
-                $content = file_get_contents($url);
+                $content = file_get_contents(urlencode($url));
                 if (!tmp_file('uncompressed/' . $filename, $content)) {
                     return $this->json(['message' => 'cannot store uncompressed file (write perms?)'], 500);
                 }
