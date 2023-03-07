@@ -289,6 +289,7 @@ class Service extends Model {
             $data->by = $current->nombre;
             $data->cover = true;
             $data->fontSize = 25;
+            $data->lineHeight = 0;
 
             if ($data->message) {
                 $lines = intval(strlen($data->message) / $lettersPerLine) + 1;
@@ -360,6 +361,7 @@ class Service extends Model {
                     }
                 }
             }
+            $data->lineHeight = $data->fontsize + 2;
             $res[] = $data;
         }
         return $res;

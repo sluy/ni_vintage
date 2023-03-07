@@ -113,7 +113,7 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
     } else {
       $html .= 'width:100%;height:100%';
     }
-    $html .= '"><div class="wrapper" style="font-size:'.$current->fontSize. 'px">' .
+    $html .= '"><div class="wrapper" style="font-size:'.$current->fontSize. 'px;line-height:'.$current->lineHeight.'px;">' .
       htmlspecialchars($current->message)
       . '</div></div>' . "\n";
   }
