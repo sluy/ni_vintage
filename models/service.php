@@ -248,11 +248,11 @@ class Service extends Model {
         return $res;
     }
 
-    public function get_ni($value, $existsKey) {
+    public function get_ni_value($value, $existsKey) {
         if ($existsKey && is_array($value)) {
             return $value;
         }
-        return $this->set('ni', Tribute::many([
+        return $this->set('ni', NI::first([
             'cliente_id' => $this->get('cliente_id')
         ]));
     }
