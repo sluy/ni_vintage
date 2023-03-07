@@ -1,7 +1,7 @@
 const events = {
   slider: {
     timer: 0,
-    seconds: 15,
+    seconds: 7,
     items: {
       height: 90,
     },
