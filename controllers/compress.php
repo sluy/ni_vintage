@@ -4,6 +4,10 @@ class CompressController extends Controller {
 
     public function index() {
         $url = $this->query('src');
+        $test = $this->query('test');
+        if ($test === 'true') {
+            dump($url);
+        }
         $compressFactor = intval($this->query('percent'));
         //Setting default;
         if ($compressFactor < 1) {
