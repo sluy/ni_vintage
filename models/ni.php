@@ -20,7 +20,7 @@ class NI extends Model {
                 }
             }
         }
-        return null;
+        return public_url('assets/images/demo/logo.png');
     }
 
 
