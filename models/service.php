@@ -261,7 +261,7 @@ class Service extends Model {
         if ($existsKey && is_array($value)) {
             return $value;
         }
-        return $this->set('company', Tribute::first([
+        return $this->set('company', Company::first([
             'id_cliente' => $this->get('cliente_id')
         ]));
     }
