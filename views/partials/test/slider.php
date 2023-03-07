@@ -106,9 +106,9 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
     $html .= '<div class="message" style="right:0;bottom:0;';
     if ($current->src) {
       if ($current->message_pos === 'bottom') {
-        $html.= 'left:0;height:300px;';
+        $html.= 'left:0;height:300px;width: 100%;';
       } else {
-        $html.= 'top:0;width:300px;';
+        $html.= 'top:0;width:300px;height: 100%;';
       }
     } else {
       $html .= 'width:100%;height:100%';
