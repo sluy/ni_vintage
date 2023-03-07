@@ -137,7 +137,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  transition: margin 500ms;
+  transition: margin 1000ms;
 }
 
 .site .left-column .events .items-wrapper ul li {
