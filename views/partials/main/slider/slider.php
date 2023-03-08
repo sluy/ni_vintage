@@ -84,7 +84,6 @@ if ($limit < 1) {
 }
 $postPagination = api('service/posts', [ 'page' => $page, 'limit' => $limit, 'paginate' => 'true']);
 
-dump($postPagination);
 $posts = $postPagination->data;
 $delay = 0;
 
