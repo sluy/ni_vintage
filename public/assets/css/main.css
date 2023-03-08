@@ -49,6 +49,14 @@ body {
   margin-top: -15px;
 }
 
+#tribute-slider-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+}
+
 .site .left-column  .events .scroll {
   display: block;
   height: 50px;

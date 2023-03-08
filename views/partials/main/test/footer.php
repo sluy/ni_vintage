@@ -1,12 +1,7 @@
 <!-- External libraries: jQuery & GreenSock -->
 <script src="<?php echo public_url('vendor/layerslider/js/jquery.js');?>"></script>
 <script src="<?php echo public_url('vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
-
-<script src="<?php echo public_url('vendor/layerslider/js/layerslider.utils.js');?>"></script>
-
 <!-- LayerSlider script files -->
-<script src="<?php echo public_url('vendor/layerslider/js/layerslider.transitions.js');?>"></script>
-<script src="<?php echo public_url('vendor/layerslider/js/layerslider.kreaturamedia.jquery.js');?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <!--Globals-->
 <script type="text/javascript">
@@ -18,7 +13,4 @@ const query = new Proxy(new URLSearchParams(window.location.search), {
 });
 </script>
 <script src="<?php echo public_url('assets/js/helpers.js?r='. md5(rand(100000, 999999)));?>"></script>
-<script src="<?php echo public_url('assets/js/api.js?r='. md5(rand(100000, 999999)));?>"></script>
 <script src="<?php echo public_url('assets/js/events.js?r='. md5(rand(100000, 999999)));?>"></script>
-
-<script src="<?php echo public_url('assets/js/slider.js');?>"></script>

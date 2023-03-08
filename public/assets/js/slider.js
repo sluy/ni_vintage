@@ -1,12 +1,13 @@
 if (["false", "0"].includes(query.show_info)) {
   $(".site").css("display", "none");
 }
+const $tributeSlider = $("#slider");
 
-$("#slider").on("slideTimelineDidComplete", function (event, slider) {
+$tributeSlider.on("slideTimelineDidComplete", function (event, slider) {
   slider.api("replay");
 });
 
-$("#slider").layerSlider({
+const tributeSlider = $tributeSlider.layerSlider({
   sliderVersion: "6.6.4",
   type: "fullsize",
   fullSizeMode: "hero",

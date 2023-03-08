@@ -24,11 +24,11 @@ define('T_TRIBUTE_CONFIG', 'ni_homenajes');
 define('T_NI', 'ni');
 define('T_COMPANIES', 'empresa');
 
-
 include_once(HELPERS_PATH . '/dump.php');
 include_once(HELPERS_PATH . '/url.php');
 include_once(HELPERS_PATH . '/file.php');
 include_once(HELPERS_PATH . '/image.php');
+include_once(HELPERS_PATH . '/api.php');
 
 #Bootstraping data to be used along app
 include_once(BOOTSTRAP_PATH . '/config.php');

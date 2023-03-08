@@ -75,10 +75,17 @@ $slideConfig = [
 ];
 
 $htmlContent = [];
+$posts = ($ctx['cfg']['dev'] === true) ? api('service/posts') : $ctx['service']->posts;
+if (!is_array($posts)) {
+  $posts = [];
+}
 
+
+$ni = ($ctx['cfg']['dev'] === true) ? api('service/ni') : (($ctx['service']->ni) ? $ctx['service']->ni->toArray(): []);
 $counter = 0;
 $delay = 0;
-foreach (array_reverse($ctx['service']->posts) as $current) {
+
+foreach (array_reverse($posts) as $current) {
   if (!isset($slideConfig[$counter]) || $current->type === 'video') {
       continue;
   }
@@ -124,8 +131,12 @@ foreach (array_reverse($ctx['service']->posts) as $current) {
   $htmlContent[] = $html;
   $counter++;
 }
+
+
 //logo bg
-echo "\n" . '<div class="floating-center"><img src="' . $ctx['service']->ni->logo_src .'"/></div>';
+if (is_array($ni) && isset($ni['logo_src']) && !empty($ni['logo_src'])) {
+    echo "\n" . '<div class="floating-center"><img src="' . $ni['logo_src'] .'"/></div>';
+}
 //posts
 echo "\n" . '<div id="slider" style="width: 1000px; height:100vh;margin:0 auto;margin-bottom: 0px;">' . "\n" .
   '<div class="ls-slide" data-ls="kenburnsscale:1.2;">' . "\n" .

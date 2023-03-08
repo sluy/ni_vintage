@@ -3,15 +3,15 @@
     <div class="row h-100">
       <div class="col-2 h-100">
         <div class="left-column h-100">
-          <?php include_partial('main/info/abrazo_velas');?>
-          <?php include_partial('main/info/brand');?>
+          <?php include_partial('main/index/info/abrazo_velas');?>
+          <?php include_partial('main/index/info/brand');?>
         </div>
       </div>
       <div class="col-3 offset-7 h-100">
         <div class="right-column h-100">
           <div class="info">
-            <?php include_partial('main/info/fallecido_info');?>
-            <?php include_partial('main/info/destino');?>
+            <?php include_partial('main/index/info/fallecido_info');?>
+            <?php include_partial('main/index/info/destino');?>
             <!--
             <div class="data">
               <div class="title">
@@ -41,7 +41,7 @@
             </div>
             -->
           </div>
-          <?php include_partial('main/info/qrcode');?>
+          <?php include_partial('main/index/info/qrcode');?>
         </div>
       </div>
     </div>
