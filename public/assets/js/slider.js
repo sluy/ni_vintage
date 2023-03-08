@@ -4,7 +4,15 @@ if (["false", "0"].includes(query.show_info)) {
 const $tributeSlider = $("#slider");
 
 $tributeSlider.on("slideTimelineDidComplete", function (event, slider) {
-  slider.api("replay");
+  if (
+    typeof TRIBUTE_PAGINATION_DATA === "object" &&
+    TRIBUTE_PAGINATION_DATA !== null &&
+    typeof parent.reloadTributeSlider === "function"
+  ) {
+    parent.reloadTributeSlider(TRIBUTE_PAGINATION_DATA.next_page);
+  } else {
+    console.log("algo falló al terminar el slide...!");
+  }
 });
 
 const tributeSlider = $tributeSlider.layerSlider({

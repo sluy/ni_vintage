@@ -136,4 +136,8 @@ echo "\n" . '<div id="slider" style="width: 1000px; height:100vh;margin:0 auto;m
   '<div class="ls-slide" data-ls="kenburnsscale:1.2;">' . "\n" .
   implode("\n", array_reverse($htmlContent)) .
   '</div></div>';
+echo "\n" . '<script type="text/javascript">' . "\n\t" .
+  'const TRIBUTE_PAGINATION_DATA = ' .
+  json_encode($postPagination, JSON_PRETTY_PRINT) .
+  ';' . "\n" . '</script>' . "\n";
 ?>
