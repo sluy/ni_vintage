@@ -16,7 +16,7 @@ class ServiceController extends Controller {
     public function posts() {
         $paginate = strtolower(trim(strval($this->query('paginate'))));
         if (!in_array($paginate, ['1', 'true'])) {
-            return $this->service()->posts;
+            return  $this->json($this->service()->posts);
         }
         $page = intval($this->query('page'));
         $limit = intval($this->query('limit'));
@@ -59,7 +59,7 @@ class ServiceController extends Controller {
         if ($page < $res['last_page']) {
             $res['next_page'] = $page + 1;
         }
-        return $res;
+        return $this->json($res);
     }
 
 
