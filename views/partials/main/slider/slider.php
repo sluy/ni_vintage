@@ -73,17 +73,13 @@ $slideConfig = [
     'data-ls'=> "showinfo:1; offsetxin:left;offsetyin:bottom;durationin:5500;easingin:easeOutQuad; fadein:false; rotatein:10; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:970;     loopoffsety:-310;   loopduration:4000;      loopstartat:transitioninstart + 73000;  loopeasing:easeInOutQuart; looprotate:20;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-20; scaleX:.5; scaleY:.5;"
   ]
 ];
-
 $htmlContent = [];
-$posts = ($ctx['cfg']['dev'] === true) ? api('service/posts') : $ctx['service']->posts;
-if (!is_array($posts)) {
-  $posts = [];
-}
-
+$postPagination = api('service/posts', [ 'page' => 1, 'limit' => 18, 'paginate' => 'true']);
+$posts = $postPagination['data'];
 $counter = 0;
 $delay = 0;
 
-foreach (array_reverse($posts) as $current) {
+foreach ($posts as $current) {
   if (!isset($slideConfig[$counter]) || $current->type === 'video') {
       continue;
   }
