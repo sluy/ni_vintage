@@ -58,7 +58,6 @@ const events = {
             qty = 1;
           }
           availableHeight = qty * events.slider.items.height;
-          console.log("showing ", qty, availableHeight);
           setTimeout(() => {
             $wrapper.css("height", availableHeight + "px");
             $wrapper.css("opacity", "1");

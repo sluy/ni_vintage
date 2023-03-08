@@ -1,5 +1,5 @@
 <?php
-$ni = ($ctx['cfg']['dev'] === true) ? api('service/ni') : (($ctx['service']->ni) ? $ctx['service']->ni->toArray(): []);
+$ni = ($ctx['cfg']['dev'] === true) ? api('service/ni') : (($ctx['service']->ni) ? $ctx['service']->ni: null);
 ?>
 <div class="brand-logo" id="brand-logo">
   <div class="wrapper">
