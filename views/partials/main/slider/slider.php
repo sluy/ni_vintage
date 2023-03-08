@@ -2,75 +2,75 @@
 $slideConfig = [
   [
     'style' => "top:70%; left:60%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-170;    loopoffsety:-340;   loopduration:4000;      loopstartat:transitioninstart + 1000;  loopeasing:easeInOutQuart; looprotate:4;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-4; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-170;    loopoffsety:-340;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:4;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-4; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:15%; left:60%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetyin:top;                        durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-80;     loopoffsety:800;    loopduration:4000;      loopstartat:transitioninstart + 5000;  loopeasing:easeInOutQuart; looprotate:-10;             loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetyin:top;                        durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-80;     loopoffsety:800;    loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-10;             loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:50%; left:20%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:left;                       durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:600;                         loopduration:4000;      loopstartat:transitioninstart + 9000;  loopeasing:easeInOutQuart; looprotate:-7;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:7; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:left;                       durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:600;                         loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-7;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:7; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:90%; left:50%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-50;     loopoffsety:-750;   loopduration:4000;      loopstartat:transitioninstart + 13000;  loopeasing:easeInOutQuart; looprotate:-2;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:2; scaleX:.5; scaleY:.5;",
+    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-50;     loopoffsety:-750;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-2;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:2; scaleX:.5; scaleY:.5;",
   ],
   [
     'style' => "top:20%; left:25%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:left;   offsetyin:top;      durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:400;     loopoffsety:750;    loopduration:4000;      loopstartat:transitioninstart + 21000;  loopeasing:easeInOutQuart; looprotate:8;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-8; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:left;   offsetyin:top;      durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:400;     loopoffsety:750;    loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:8;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-8; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:80%; left:80%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:right;  offsetyin:bottom;   durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-550;    loopoffsety:-650;   loopduration:4000;      loopstartat:transitioninstart + 25000;  loopeasing:easeInOutQuart; looprotate:5;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-5; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:right;  offsetyin:bottom;   durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-550;    loopoffsety:-650;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:5;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-5; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:8%;  left:80%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:right;  offsetyin:top;      durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-450;    loopoffsety:950;    loopduration:4000;      loopstartat:transitioninstart + 29000;  loopeasing:easeInOutQuart; looprotate:-10;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:right;  offsetyin:top;      durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-450;    loopoffsety:950;    loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-10;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:80%; left:10%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:left;   offsetyin:bottom;   durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:10; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:970;     loopoffsety:-310;   loopduration:4000;      loopstartat:transitioninstart + 33000;  loopeasing:easeInOutQuart; looprotate:20;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-20; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:left;   offsetyin:bottom;   durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:10; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:970;     loopoffsety:-310;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:20;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-20; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:47%; left:55%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:right;                      durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-90;     loopoffsety:50;     loopduration:4000;      loopstartat:transitioninstart + 37000;  loopeasing:easeInOutQuart; looprotate:-3;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:3; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:right;                      durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-90;     loopoffsety:50;     loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-3;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:3; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:70%; left:60%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-170;    loopoffsety:-340;   loopduration:4000;      loopstartat:transitioninstart + 41000;  loopeasing:easeInOutQuart; looprotate:4;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-4; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-170;    loopoffsety:-340;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:4;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-4; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:15%; left:60%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetyin:top;                        durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-80;     loopoffsety:800;    loopduration:4000;      loopstartat:transitioninstart + 45000;  loopeasing:easeInOutQuart; looprotate:-10;             loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetyin:top;                        durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-80;     loopoffsety:800;    loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-10;             loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:50%; left:20%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:left;                       durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:600;                         loopduration:4000;      loopstartat:transitioninstart + 49000;  loopeasing:easeInOutQuart; looprotate:-7;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:7; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:left;                       durationin:5500; delayin:__DELAY__;      easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:600;                         loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-7;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:7; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:90%; left:50%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-50;     loopoffsety:-750;   loopduration:4000;      loopstartat:transitioninstart + 53000;  loopeasing:easeInOutQuart; looprotate:-2;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:2; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetyin:bottom;                     durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-50;     loopoffsety:-750;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-2;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:2; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:40%; left:94%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:right;                      durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-900;    loopoffsety:170;    loopduration:4000;      loopstartat:transitioninstart + 57000;  loopeasing:easeInOutQuart; looprotate:2;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-2; scaleX:.5; scaleY:.5;"
+    'data-ls' => "showinfo:1; offsetxin:right;                      durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-900;    loopoffsety:170;    loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:2;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-2; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:20%; left:25%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:left;   offsetyin:top;      durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:400;     loopoffsety:750;    loopduration:4000;      loopstartat:transitioninstart + 61000;  loopeasing:easeInOutQuart; looprotate:8;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-8; scaleX:.5; scaleY:.5;",
+    'data-ls' => "showinfo:1; offsetxin:left;   offsetyin:top;      durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:400;     loopoffsety:750;    loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:8;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-8; scaleX:.5; scaleY:.5;",
   ],
   [
     'style' => "top:80%; left:80%;filter:grayscale(100%) sepia(30%);",
-    'data-ls' => "showinfo:1; offsetxin:right;  offsetyin:bottom;   durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-550;    loopoffsety:-650;   loopduration:4000;      loopstartat:transitioninstart + 65000;  loopeasing:easeInOutQuart; looprotate:5;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-5; scaleX:.5; scaleY:.5;",
+    'data-ls' => "showinfo:1; offsetxin:right;  offsetyin:bottom;   durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-550;    loopoffsety:-650;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:5;                loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-5; scaleX:.5; scaleY:.5;",
   ],
   [
     'style' => "top:8%;  left:80%;filter:grayscale(100%) sepia(30%);",
-    'data-ls'=> "showinfo:1; offsetxin:right;  offsetyin:top;      durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-450;    loopoffsety:950;    loopduration:4000;      loopstartat:transitioninstart + 69000;  loopeasing:easeInOutQuart; looprotate:-10;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
+    'data-ls'=> "showinfo:1; offsetxin:right;  offsetyin:top;      durationin:5500; delayin:__DELAY__;       easingin:easeOutQuad; fadein:false; rotatein:30; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:-450;    loopoffsety:950;    loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:-10;              loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:10; scaleX:.5; scaleY:.5;"
   ],
   [
     'style' => "top:80%; left:10%;filter:grayscale(100%) sepia(30%);",
-    'data-ls'=> "showinfo:1; offsetxin:left;offsetyin:bottom;durationin:5500;easingin:easeOutQuad; fadein:false; rotatein:10; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:970;     loopoffsety:-310;   loopduration:4000;      loopstartat:transitioninstart + 73000;  loopeasing:easeInOutQuart; looprotate:20;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-20; scaleX:.5; scaleY:.5;"
+    'data-ls'=> "showinfo:1; offsetxin:left;offsetyin:bottom;durationin:5500;easingin:easeOutQuad; fadein:false; rotatein:10; scalexin:.5; scaleyin:.5; durationout:4000; startatout:allinandloopend + 0; easingout:easeInQuint; loop:true; loopoffsetx:970;     loopoffsety:-310;   loopduration:4000;      loopstartat:transitioninstart + __TRANSITION__;  loopeasing:easeInOutQuart; looprotate:20;               loopscalex:1.7; loopscaley:1.7; loopcount:1; loopfilter:grayscale(0%) sepia(0%) contrast(150%); rotation:-20; scaleX:.5; scaleY:.5;"
   ]
 ];
 $htmlContent = [];
@@ -82,10 +82,15 @@ $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 15;
 if ($limit < 1) {
   $limit = 15;
 }
+if ($limit > 18) {
+  $limit = 18;
+}
+
 $postPagination = api('service/posts', [ 'page' => $page, 'limit' => $limit, 'paginate' => 'true']);
 
 $posts = $postPagination->data;
 $delay = 0;
+$transition = 1000;
 
 foreach ($posts as $counter => $current) {
   if ($counter === 0) {
@@ -95,9 +100,16 @@ foreach ($posts as $counter => $current) {
   } else {
       $delay += 400;
   }
+
+  if ($counter > 0) {
+    $transition += 4000;
+  }
+  $dataLS = str_replace('__DELAY__', $delay, $slideConfig[$counter]['data-ls']);
+  $dataLS = str_replace('__TRANSITION__', $transition, $dataLS);
+
   $html = "\t"  . '<div class="ls-l post" ' .
     'style="width: '.$current->width.'px; height:'.$current->height.'px;' . $slideConfig[$counter]['style'] . '" ' .
-    'data-ls="' . str_replace('__DELAY__', $delay, $slideConfig[$counter]['data-ls']) . '">' . "\n" .
+    'data-ls="' . $dataLS . '">' . "\n" .
     '<div class="content">' . "\n" . "\t\t" ;
   if ($current->src) {
     $html .= '<div class="picture" style="background-image: url(\''. url('compress?src=' . $current->src) .'\');';

@@ -17,5 +17,5 @@ const query = new Proxy(new URLSearchParams(window.location.search), {
 <script src="<?php echo public_url('assets/js/events.js?r='. md5(rand(100000, 999999)));?>"></script>
 <script src="<?php echo public_url('assets/js/slider-iframe.js?r='. md5(rand(100000, 999999)));?>"></script>
 <script type="text/javascript">
-reloadTributeSlider(1, 5);
+reloadTributeSlider(1, 15);
 </script>

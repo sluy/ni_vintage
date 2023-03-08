@@ -5,7 +5,10 @@ function reloadTributeSlider(page, limit) {
   }
   limit = parseInt(limit);
   if (isNaN(limit) || limit < 1) {
-    limit = 5;
+    limit = 15;
+  }
+  if (limit > 18) {
+    limit = 18;
   }
   const $iframe = $("#tribute-slider-iframe");
   if ($iframe.length < 1) {
