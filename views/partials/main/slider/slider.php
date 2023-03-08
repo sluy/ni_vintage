@@ -80,8 +80,6 @@ if (!is_array($posts)) {
   $posts = [];
 }
 
-
-$ni = ($ctx['cfg']['dev'] === true) ? api('service/ni') : (($ctx['service']->ni) ? $ctx['service']->ni->toArray(): []);
 $counter = 0;
 $delay = 0;
 
@@ -131,12 +129,7 @@ foreach (array_reverse($posts) as $current) {
   $htmlContent[] = $html;
   $counter++;
 }
-
-
-//logo bg
-if (is_array($ni) && isset($ni['logo_src']) && !empty($ni['logo_src'])) {
-    echo "\n" . '<div class="floating-center"><img src="' . $ni['logo_src'] .'"/></div>';
-}
+include_partial('main/shared/bg_logo');
 //posts
 echo "\n" . '<div id="slider" style="width: 1000px; height:100vh;margin:0 auto;margin-bottom: 0px;">' . "\n" .
   '<div class="ls-slide" data-ls="kenburnsscale:1.2;">' . "\n" .
