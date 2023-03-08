@@ -52,6 +52,7 @@ class ServiceController extends Controller {
         ];
         if (isset($pages[$page])) {
             $res['data'] = $pages[$page];
+            $res['count'] = count($res['data']);
             if ($page > 1) {
                 $res['prev_page'] = $page - 1;
             }
