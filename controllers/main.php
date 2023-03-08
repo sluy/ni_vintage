@@ -21,8 +21,12 @@ class MainController extends Controller {
     }
 
     public function slider() {
+        $page = intval($this->query('page'));
+        if ($page < 1) {
+            $page = 1;
+        }
         if ($this->ctx->service) {
-            include_view('main/slider');
+            include_view('main/slider', ['page' => $page]);
         } else {
             echo '';
         }

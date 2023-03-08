@@ -56,7 +56,7 @@ function api($route = '', $query = [], $response = 'json') {
                 return null;
             }
         }
-         return $plain;
+        return $plain;
     } catch (\Throwable $th) {
         return null;
     }

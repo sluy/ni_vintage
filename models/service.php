@@ -274,7 +274,7 @@ class Service extends Model {
 
         $lettersPerLine = 30;
         foreach ($this->get('homenajes') as $current) {
-            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0) {
+            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0 || $current->type === 'video') {
                 continue;
             }
             $data = new stdClass();

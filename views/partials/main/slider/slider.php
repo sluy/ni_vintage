@@ -74,15 +74,21 @@ $slideConfig = [
   ]
 ];
 $htmlContent = [];
-$postPagination = api('service/posts', [ 'page' => 1, 'limit' => 18, 'paginate' => 'true']);
-$posts = $postPagination['data'];
-$counter = 0;
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+if ($page < 1) {
+  $page = 1;
+}
+$limit = isset($_GET['limit']) ? intval($_GET['limit']) : 15;
+if ($limit < 1) {
+  $limit = 15;
+}
+$postPagination = api('service/posts', [ 'page' => $page, 'limit' => 15, 'paginate' => 'true']);
+
+dump($postPagination);
+$posts = $postPagination->data;
 $delay = 0;
 
-foreach ($posts as $current) {
-  if (!isset($slideConfig[$counter]) || $current->type === 'video') {
-      continue;
-  }
+foreach ($posts as $counter => $current) {
   if ($counter === 0) {
       $delay = 0;
   } elseif ($counter === 1) {
