@@ -274,7 +274,7 @@ class Service extends Model {
 
         $lettersPerLine = 30;
         foreach ($this->get('homenajes') as $current) {
-            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0 || $current->type === 'video') {
+            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0 || $current->link_video !== null) {
                 continue;
             }
             $data = new stdClass();
@@ -374,7 +374,7 @@ class Service extends Model {
         $res = [];
 
         foreach ($this->get('homenajes') as $current) {
-            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0 || $current->link_video) {
+            if ($current->oculto_tipo === 'admin' || $current->vela_abrazo !== 0) {
                 continue;
             }
             $src = null;
@@ -384,7 +384,6 @@ class Service extends Model {
                 $src = 'https://ni.neo.fo/' . $current->foto;
             }
             if (!empty($src)) {
-
                 try {
                     list($width, $height, $type, $attr) = getimagesize($src);
                     if ($width > 0 && $height > 0) {
