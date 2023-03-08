@@ -44,10 +44,7 @@ class Controller {
         }
         header('HTTP/1.1 ' . $code);
         if ($data !== null) {
-            if ($data instanceof Model) {
-                $data = $data->toArray();
-            }
-            echo json_encode($data, \JSON_PRETTY_PRINT);
+            echo json_encode(to_plain_array($data), \JSON_PRETTY_PRINT);
         }
         die();
     }
