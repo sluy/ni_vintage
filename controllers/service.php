@@ -37,7 +37,7 @@ class ServiceController extends Controller {
             if (!isset($pages[$currentPage])) {
                 $pages[$currentPage] = [];
             }
-            $pages[$currentPage] = $current;
+            $pages[$currentPage][] = $current;
         }
         $res = [
             'total_items' => count($all),
