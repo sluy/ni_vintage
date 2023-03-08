@@ -63,6 +63,10 @@ class ServiceController extends Controller {
         return $this->json($res);
     }
 
+    public function tributes() {
+        $this->json($this->service()->homenajes);
+
+    }
 
     public function events() {
         $this->json($this->service()->events);

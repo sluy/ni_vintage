@@ -1,5 +1,5 @@
 const api = axios;
-api.defaults.baseUrl = API_URL;
+api.defaults.baseUrl = window.API_URL;
 
 async function initialize() {
   try {
