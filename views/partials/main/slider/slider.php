@@ -82,7 +82,7 @@ $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 15;
 if ($limit < 1) {
   $limit = 15;
 }
-$postPagination = api('service/posts', [ 'page' => $page, 'limit' => 15, 'paginate' => 'true']);
+$postPagination = api('service/posts', [ 'page' => $page, 'limit' => $limit, 'paginate' => 'true']);
 
 dump($postPagination);
 $posts = $postPagination->data;
